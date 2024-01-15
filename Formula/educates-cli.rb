@@ -4,6 +4,12 @@ class EducatesCli < Formula
   version "2.6.16"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/educates/homebrew-educates/releases/download/educates-cli-2.6.16"
+    sha256 cellar: :any_skip_relocation, ventura:      "328d459f4e41a2f3bf6dd642c3baa421852da5e80cc592c76c5e86a80a8b3182"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b4e39658c882f8a35f09ea519a51e6ccf478d7fe83a15446292a0ddfcf3d9470"
+  end
+
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/vmware-tanzu-labs/educates-training-platform/releases/download/2.6.16/educates-darwin-arm64"
